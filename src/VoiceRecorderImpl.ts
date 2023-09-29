@@ -184,5 +184,8 @@ export class VoiceRecorderImpl {
         this.mediaRecorder = null;
         this.chunks = [];
     }
-
+    
+    accessChunks(){
+        return this.chunks;
+    }
 }
