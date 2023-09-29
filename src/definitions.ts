@@ -33,4 +33,6 @@ export interface VoiceRecorderPlugin {
 
   getCurrentStatus (): Promise<CurrentRecordingStatus>;
 
+  accessChunks(): any[];
+
 }
