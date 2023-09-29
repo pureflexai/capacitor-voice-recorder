@@ -21,7 +21,7 @@ const neverResolvingPromise = (): Promise<any> => new Promise(() => undefined);
 export class VoiceRecorderImpl {
 
     private mediaRecorder: MediaRecorder | null = null;
-    private chunks: any[] = [];
+    public chunks: any[] = [];
     private pendingResult: Promise<RecordingData> = neverResolvingPromise();
 
     public static async canDeviceVoiceRecord(): Promise<GenericResponse> {
