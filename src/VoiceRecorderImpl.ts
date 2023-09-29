@@ -185,7 +185,7 @@ export class VoiceRecorderImpl {
         this.chunks = [];
     }
     
-    accessChunks(){
+    public accessChunks(){
         return this.chunks;
     }
 }
