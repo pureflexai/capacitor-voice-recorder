@@ -1,5 +1,5 @@
 {
-  "name": "capacitor-voice-recorder",
+  "name": "@pureflex-studio/capacitor-voice-recorder",
   "version": "5.0.0",
   "description": "Capacitor plugin for voice recording",
   "main": "dist/plugin.cjs.js",
