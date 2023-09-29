@@ -11,7 +11,8 @@
     "android/build.gradle",
     "dist/",
     "ios/Plugin/",
-    "CapacitorVoiceRecorder.podspec"
+    "CapacitorVoiceRecorder.podspec",
+    "src"
   ],
   "author": {
     "name": "Avihu Harush",
