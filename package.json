@@ -14,6 +14,10 @@
     "CapacitorVoiceRecorder.podspec",
     "src"
   ],
+  "author": {
+    "name": "Avihu Harush",
+    "email": "tchvu3@gmail.com"
+  },
   "license": "MIT",
   "repository": {
     "type": "git",
