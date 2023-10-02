@@ -1,10 +1,12 @@
-export type Base64String = string
+import { VoiceRecorderImpl } from './VoiceRecorderImpl';
+
+export type Base64String = string;
 
 export interface RecordingData {
   value: {
-    recordDataBase64: Base64String
-    msDuration: number
-    mimeType: string
+    recordDataBase64: Base64String;
+    msDuration: number;
+    mimeType: string;
   };
 }
 
@@ -17,22 +19,30 @@ export interface CurrentRecordingStatus {
 }
 
 export interface VoiceRecorderPlugin {
-  canDeviceVoiceRecord (): Promise<GenericResponse>;
+  voiceRecorderInstance: VoiceRecorderImpl;
+  canDeviceVoiceRecord(): Promise<GenericResponse>;
 
-  requestAudioRecordingPermission (): Promise<GenericResponse>;
+  requestAudioRecordingPermission(): Promise<GenericResponse>;
 
-  hasAudioRecordingPermission (): Promise<GenericResponse>;
+  hasAudioRecordingPermission(): Promise<GenericResponse>;
 
-  startRecording (): Promise<GenericResponse>;
+  startRecording(timeSlice: number | null): Promise<GenericResponse>;
 
-  stopRecording (): Promise<RecordingData>;
+  stopRecording(): Promise<RecordingData>;
 
-  pauseRecording (): Promise<GenericResponse>;
+  pauseRecording(): Promise<GenericResponse>;
 
-  resumeRecording (): Promise<GenericResponse>;
+  resumeRecording(): Promise<GenericResponse>;
 
-  getCurrentStatus (): Promise<CurrentRecordingStatus>;
+  getCurrentStatus(): Promise<CurrentRecordingStatus>;
 
-  accessChunks(): any[];
+  accessChunks(): string[];
 
+  accessBuffers(): ArrayBuffer[];
+
+  requestData(): void;
+
+  trimChunks(): void;
+
+  trimBuffers(): void;
 }

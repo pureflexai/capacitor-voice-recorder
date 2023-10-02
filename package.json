@@ -1,6 +1,6 @@
 {
   "name": "@pureflex-studio/capacitor-voice-recorder",
-  "version": "5.0.0",
+  "version": "5.2.9",
   "description": "Capacitor plugin for voice recording",
   "main": "dist/plugin.cjs.js",
   "module": "dist/esm/index.js",
@@ -14,17 +14,10 @@
     "CapacitorVoiceRecorder.podspec",
     "src"
   ],
-  "author": {
-    "name": "Avihu Harush",
-    "email": "tchvu3@gmail.com"
-  },
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tchvu3/capacitor-voice-recorder.git"
-  },
-  "bugs": {
-    "url": "https://github.com/tchvu3/capacitor-voice-recorder/issues"
+    "url": "git+https://github.com/pureflexai/capacitor-voice-recorder"
   },
   "keywords": [
     "capacitor",
