@@ -3,7 +3,6 @@ package com.tchvu3.capacitorvoicerecorder;
 import android.content.Context;
 import android.media.MediaRecorder;
 import android.os.Build;
-
 import java.io.File;
 import java.io.IOException;
 
@@ -22,8 +21,8 @@ public class CustomMediaRecorder {
     private void generateMediaRecorder() throws IOException {
         mediaRecorder = new MediaRecorder();
         mediaRecorder.setAudioSource(MediaRecorder.AudioSource.MIC);
-        mediaRecorder.setOutputFormat(MediaRecorder.OutputFormat.AAC_ADTS);
-        mediaRecorder.setAudioEncoder(MediaRecorder.AudioEncoder.AAC);
+        mediaRecorder.setOutputFormat(MediaRecorder.OutputFormat.OGG);
+        mediaRecorder.setAudioEncoder(MediaRecorder.AudioEncoder.OPUS);
         mediaRecorder.setAudioEncodingBitRate(96000);
         mediaRecorder.setAudioSamplingRate(44100);
         setRecorderOutputFile();
@@ -102,9 +101,7 @@ public class CustomMediaRecorder {
         } catch (Exception exp) {
             return exp.getMessage().startsWith("stop failed");
         } finally {
-            if (tempMediaRecorder != null)
-                tempMediaRecorder.deleteOutputFile();
+            if (tempMediaRecorder != null) tempMediaRecorder.deleteOutputFile();
         }
     }
-
 }
